@@ -8,6 +8,7 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def show
     @comments = Comment.where(post_id: @post)
+    @random_post = Post.where.not(id: @post).order("RANDOM()").first
   end
 
   def new
