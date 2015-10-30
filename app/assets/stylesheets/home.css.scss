@@ -8,14 +8,14 @@
 		color: #9B9B9B;
 	}
 }
+#index-text{
+	h2{
+		margin-bottom: 20px;
+	}
+}
 #posts {
 	.post {
-		background: #F8F9FA;
-		width: 30%;
-		float: left;
-		margin: 1rem 1.5%;
-		border: 1px solid #E4E4E4;
-		border-radius: 0.3rem;
+		margin-bottom: 15px;
 		.post_image {
 			height: 200px;
 			overflow: hidden;
@@ -30,7 +30,7 @@
 				font-weight: 100;
 				padding: 1rem 5%;
 				border-bottom: 1px solid #E4E4E4;
-				font-size: 1.25rem;
+				font-size: 2rem;
 				a {
 					text-decoration: none;
 					color: #333233;
@@ -44,7 +44,7 @@
 				color: #969696;
 				.username, .buttons {
 					margin: 0;
-					font-size: .8rem;
+					font-size: 1.25rem;
 				}
 				.username {
 					float: left;

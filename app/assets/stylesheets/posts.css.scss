@@ -3,14 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #post_show {
 	padding-top: 2rem;
-	.post_image_description {
-		width: 50%;
-		float: left;
-		margin-right: 5%;
-	}
+
 	.post_data {
-		width: 15%;
-		float: left;
 		.button {
 			width: 100%;
 			display: inline-block;
@@ -35,19 +29,16 @@
 		}
 	}
 	#random_post {
-		width: 25%;
-		margin-left: 5%;
-		margin-top: -3.2rem;
-		float: left;
 		h3 {
-			font-size: 1rem;
+			font-size: 1.75rem;
+			margin: 0 0 20px 0 !important;
 		}
 		.post {
 			background: #F8F9FA;
 			border: 1px solid #E4E4E4;
 			border-radius: 0.3rem;
 			.post_image {
-				height: 200px;
+				max-height: 400px;
 				overflow: hidden;
 				img {
 					width: 100%;
@@ -60,7 +51,7 @@
 					font-weight: 100;
 					padding: 1rem 5%;
 					border-bottom: 1px solid #E4E4E4;
-					font-size: 1.25rem;
+					font-size: 1.75rem !important;
 					a {
 						text-decoration: none;
 						color: #333233;
@@ -74,7 +65,7 @@
 					color: #969696;
 					.username, .buttons {
 						margin: 0;
-						font-size: .8rem;
+						font-size: 1.25rem;
 					}
 					.username {
 						float: left;
@@ -103,7 +94,7 @@
 	}
 	.description {
 		margin: 2rem 0;
-		font-size: 1.1rem;
+		font-size: 1.65rem;
 		line-height: 1.5;
 		color: #969696;
 	}
@@ -111,7 +102,7 @@
 
 #comments {
 	padding-bottom: 4rem;
-	width: 50%;
+	margin-left: 2.5%;
 	.comment_count {
 		border-bottom: 1px solid #E9E9E9;
 		padding-bottom: .5rem;

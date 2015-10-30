@@ -1,6 +1,9 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
 /*
- *= require_self
- *= require font-awesome
+*= require_self
+*= require font-awesome
  */
 
 body {
@@ -12,19 +15,22 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
 }
 
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
+.alert {
+	background: #fefefe;
+    color: #666666;
+    font-weight: bold;
+    font-size: small;
+    padding: 12px;
+    padding-left: 16px;
+    border-top: solid 3px #CCCCCC;
+    border-radius: 5px;
+    margin-bottom: 10px;
+     border-color: #b8dbf2;
+    -webkit-box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
+       -moz-box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
+            box-shadow: 0 10px 10px -5px rgba(0,0,0,.08);
 }
 
-.clearfix:before, .clearfix:after {
-	content: " ";
-	display: table;
-}
-
-.clearfix:after {
-	clear: both;
-}
 
 .button {
 	border: 1px solid #9B9B9B;
@@ -33,36 +39,23 @@ h1, h2, h3, h4, h5, h6 {
 	outline: none;
 	background: white;
 	color: #9B9B9B;
+		&:hover{
+			border: 1px solid #333233 !important;
+			background: #fff !important;
+		}
 }
 
-header {
-	width: 100%;
-	padding: 2rem 0;
-	border-bottom: 1px solid #E4E4E4;
-	#logo {
-		float: left;
-		font-size: 1.75rem;
-		a {
-			color: #333233;
-			text-decoration: none;
-			&:hover {
-				color: #50A7C7;
-			}
-		}
-	}
-	nav {
-		float: right;
-		a {
-			margin-left: 1.5rem;
-			line-height: 2;
-			color: #9B9B9B;
-			text-decoration: none;
-			&:hover {
-				color: #50A7C7;
-			}
-		}
-	}
+.navbar-default{
+	background: #fff !important;
+	border: none !important;
 }
+
+/*.navbar-default .navbar-nav > li > a{
+	color: #9B9B9B !important;
+}*/
+
+
+
 
 @import 'home.css.scss';
 @import 'posts.css.scss';

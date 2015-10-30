@@ -1,33 +1,36 @@
-- if user_signed_in?
-  %p#intro
-    Hello
-    = current_user.name
-    %br/
-    %span
-      Share your inspiration and see what's inspriring others
-- else
-  %p#intro
-    What Inspires you?
-    %br/
-    %span
-      Share your inspiration and see what's inpriring others
+.container
+  .row
+    .col-md-12#index-text
+      - if user_signed_in?
+        %h2.text-center
+          Hello
+          = current_user.name
+          %br/
+          %small.text-center
+            Share your inspiration and see what's inspriring others
+      - else
+        %h2.text-center
+          What Inspires you?
+          %br/
+          %small.text-center
+            Share your inspiration and see what's inpriring others
 
-#posts
-  - @posts.each do |post|
-    .post
-      .post_image
-        = link_to (image_tag post.image.url(:small)), post
-      .post_content
-        .title
-          %h2= link_to post.title, post
-        .data.clearfix
-          %p.username
-            Shared by
-            = post.user.name
-          %p.buttons
-            %span
-              %i.fa.fa-comments-o
-              = post.comments.count
-            %span
-              %i.fa.fa-thumbs-o-up
-              = post.get_likes.size
+      .row#posts
+        - @posts.each do |post|
+          .col-md-4.post
+            .post_image
+              = link_to (image_tag post.image.url(:small)), post
+            .post_content
+              .title
+                %h2= link_to post.title, post
+              .data.clearfix
+                %p.username
+                  Shared by
+                  = post.user.name
+                %p.buttons
+                  %span
+                    %i.fa.fa-comments-o
+                    = post.comments.count
+                  %span
+                    %i.fa.fa-thumbs-o-up
+                    = post.get_likes.size

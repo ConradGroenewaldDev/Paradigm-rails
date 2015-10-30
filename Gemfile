@@ -31,6 +31,8 @@ gem 'acts_as_votable', '~> 0.10.0'
 gem 'font-awesome-rails', '~> 4.4'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
