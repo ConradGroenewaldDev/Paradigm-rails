@@ -33,7 +33,7 @@
             .post_content
               .title
                 %h2= link_to @random_post.title, post_path(@random_post)
-              .data.clearfix
+              .data
                 %p.username
                   Shared by
                   = @random_post.user.name

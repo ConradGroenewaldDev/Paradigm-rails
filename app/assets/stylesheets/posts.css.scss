@@ -36,7 +36,7 @@
 		}
 		.post {
 			background: #F8F9FA;
-			border: 1px solid #E4E4E4;
+			border-bottom: 1px solid #E4E4E4;
 			border-radius: 0.3rem;
 			.post_image {
 				max-height: 400px;
@@ -62,7 +62,7 @@
 					}
 				}
 				.data {
-					padding: .75rem 5%;
+					padding: 2rem 5%;
 					color: #969696;
 					.username, .buttons {
 						margin: 0;
@@ -82,7 +82,7 @@
 		}
 	}
 	h1 {
-		margin: 0;
+		margin-left: 1%;
 		color: #333233;
 	}
 	img {
