@@ -9,7 +9,12 @@
 
 %body
   %header
-    = render "layouts/header" 
+
+
+    = render "layouts/header"
+    = render "posts/login_modal"
+    = render "posts/signup_modal"
+
 
 .container
   - flash.each do |name, msg|

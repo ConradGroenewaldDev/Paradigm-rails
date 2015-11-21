@@ -1,0 +1,13 @@
+/ Button trigger modal
+.data{"data-target" => "#myModal", "data-toggle" => "modal", :type => "button"}
+  Edit
+/ Modal
+#myModal.modal.fade{"aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog.modal-lg{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+        %h4#myModalLabel.modal-title Edit
+      .modal-body
+        = render 'form'

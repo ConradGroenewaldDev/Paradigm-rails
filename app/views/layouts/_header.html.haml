@@ -21,5 +21,5 @@
                 %li= link_to "Settings", edit_user_registration_path
                 %li= link_to "Logout", destroy_user_session_path, method: :delete
           - else
-            %li= link_to "Sign In", new_user_session_path
-            %li= link_to "Sign Up", new_user_registration_path, class: "button"
+            %a.btn.button{:href => "#", :onclick => "$('#LogIn').modal('show');"} Login
+            %a.btn.button{:href => "#", :onclick => "$('#SignUp').modal('show');"} Sign Up

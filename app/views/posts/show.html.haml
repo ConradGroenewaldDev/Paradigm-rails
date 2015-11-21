@@ -7,6 +7,7 @@
         = @post.user.name
         about
         = time_ago_in_words(@post.created_at)
+        ago
       .clearfix
         .col-md-6
           = image_tag @post.image.url(:medium)
@@ -23,7 +24,7 @@
             %i.fa.fa-comments-o
             = pluralize(@post.comments.count, "Comment")
           - if @post.user == current_user
-            = link_to "Edit", edit_post_path(@post), class: "data"
+            = render 'edit_modal'
             = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
         .col-md-3#random_post
           %h3 Other Inspiration

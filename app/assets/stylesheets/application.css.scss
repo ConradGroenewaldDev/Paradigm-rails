@@ -53,7 +53,33 @@ h1, h2, h3, h4, h5, h6 {
 /*.navbar-default .navbar-nav > li > a{
 	color: #9B9B9B !important;
 }*/
-
+.post-form{
+	textarea{
+		max-width: 100%;
+		min-height: 150px;
+	}
+	#post_title{
+		width:90%;
+	}
+	#post_link{
+		width: 90%;
+	}
+	#post_description{
+		width: 100%;
+	}
+	.input.string.optional.post_title{
+		margin-bottom: 20px;
+	}
+	.input.text.optional.post_description{
+		margin-top: 20px;
+	}
+	.input.file.optional.post_image{
+		margin: 20px 0 20px;
+	}
+	.input.file.optional.post_image label{
+		display: none;
+	}
+}
 
 
 

@@ -1,7 +1,15 @@
-= simple_form_for @post do |f|
-  = f.input :image
-  = f.input :title
-  = f.input :link
-  = f.input :description
+= simple_form_for @post, :html => { :class => 'post-form form-group' } do |f|
+  .container
+    .col-md-6
+      .form-control
+        = image_tag @post.image.url(:small)
+        = f.input :image
+    .col-md-6
+      .form-control
+        = f.input :title
+    .col-md-6.link_float
+      = f.input :link
+    .col-md-12
+      = f.input :description
 
-  =f.button :submit
+      =f.button :submit
