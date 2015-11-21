@@ -20,11 +20,12 @@
           = link_to dislike_post_path(@post), method: :get, class: "data" do
             %i.fa.fa-thumbs-o-down
             = pluralize(@post.get_downvotes.size, "Dislike")
-          %p.data
+          %p.data.edit
             %i.fa.fa-comments-o
             = pluralize(@post.comments.count, "Comment")
           - if @post.user == current_user
-            = render 'edit_modal'
+            .edit
+              = render 'edit_modal'
             = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
         .col-md-3#random_post
           %h3 Other Inspiration

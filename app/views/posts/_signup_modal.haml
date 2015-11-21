@@ -6,18 +6,19 @@
         %button.close{"data-dismiss" => "modal", :type => "button"} &times;
         %h2.modal-title Sign Up
       .modal-body.form-group
-        %p Please enter your username and password
+        %p Please Fill in all the required fields
         = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
           .field
-            = f.input :name, required: true, autofocus: true
+            = f.input :name, required: true, autofocus: true, input_html: { class: "form-control" }
             %br/
-            = f.input :email, required: true
+            = f.input :email, required: true, input_html: { class: "form-control" }
           .field
-            = f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
+            = f.input :password, required: true, input_html: { class: "form-control" }, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length)
             %br/
           .field
-            = f.input :password_confirmation, required: true
+            = f.input :password_confirmation, required: true, input_html: { class: "form-control" }
           .form-actions
+            %br/
             = f.submit "Sign Up", class: "btn button"
       .modal-footer
         .btn.button{"data-dismiss" => "modal", :type => "button"} Close

@@ -1,3 +1,4 @@
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
@@ -55,7 +56,7 @@ h1, h2, h3, h4, h5, h6 {
 }*/
 .post-form{
 	textarea{
-		max-width: 100%;
+		width: 100%;
 		min-height: 150px;
 	}
 	#post_title{
@@ -64,9 +65,9 @@ h1, h2, h3, h4, h5, h6 {
 	#post_link{
 		width: 90%;
 	}
-	#post_description{
+	/*#post_description{
 		width: 100%;
-	}
+	}*/
 	.input.string.optional.post_title{
 		margin-bottom: 20px;
 	}
@@ -81,6 +82,20 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.edit{
+	cursor: pointer;
+}
+
+.scrollup {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+		background-image: url('/assets/arrow.png') center-center;
+    background-color: #ccc;
+}
 
 
 @import 'home.css.scss';
