@@ -1,28 +1,75 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="container">
+    <div class="row">
+        <h2>Edit <%= resource_name.to_s.humanize %></h2>
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= f.error_notification %>
+        <hr />
+        <br />
+        <div class="row">
+            <div class="col-md-6">
 
-  <div class="form-inputs">
-    <%= f.input :name, required: true, autofocus: true %>
-    <%= f.input :email, required: true %>
+                <form role="form">
+                    <div class="form-group float-label-control">
+                        <%= f.input :name, required: true, autofocus: true, class: "form-control" %>
+                    </div>
+                    <br />
+                    <div class="form-group float-label-control">
+                        <%= f.input :occupation, class: "form-control"%>
+                    </div>
+                    <br />
+                    <div class="form-group float-label-control">
+                        <%= f.input :about, class: "form-control" %>
+                    </div>
+                    <br />
+                        <div class="form-group float-label-control">
+                            <%= f.input :email, required: true, class: "form-control"%>
+                        </div>
+                        <br />
+                        <div class="form-group float-label-control">
+                            <%= f.input :avatar, class: "form-control button" %>
+                        </div><br />
+                    </div>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+                    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                    <% end %>
+                      </form>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-  </div>
+                  <div class="col-md-6">
+                    <form>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+                    <div class="form-group float-label-control">
 
-<h3>Cancel my account</h3>
+                        <%= f.input :password, autocomplete: "true", hint: "leave it blank if you don't want to change it", required: false %>
+                    </div>
+                    <br />
+                    <div class="form-group float-label-control">
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                        <%= f.input :password_confirmation, required: false %>
+                    </div>
+                    <br />
+                    <div class="form-group float-label-control">
 
-<%= link_to "Back", :back %>
+                          <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+                    </div>
+                    <br />
+
+
+                      <%= f.button :submit, "Update", class: "button" %>
+                      <br />
+                  <% end %>
+
+                  <h3>Cancel my account</h3>
+
+                  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+                  <%= link_to "Back", :back %>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

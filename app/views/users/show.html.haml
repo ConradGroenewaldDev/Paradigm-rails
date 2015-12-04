@@ -1,0 +1,30 @@
+
+.container{:style => "margin-top: 20px; margin-bottom: 20px;"}
+  .row.panel
+    .col-md-4.bg_blur
+
+      %a.follow_btn.hidden-xs{:href => "#"} Follow
+    .col-md-8.col-xs-12
+      .img-thumbnail.picture.hidden-xs
+        = image_tag @user.avatar.url(:thumb)
+      .img-thumbnail.visible-xs.picture_mob
+        = image_tag @user.avatar.url(:thumb)
+      .profile-header
+        %h2
+          = @user.name
+        %h4
+          = @user.occupation
+        %span
+          = @user.about
+  .row.profile-nav
+    .col-md-4
+    .col-md-8.col-xs-12{:style => "margin: 0px;padding: 0px;"}
+      .col-md-4.col-xs-4.profile-well
+        %i.fa.fa-weixin.fa-lg
+        16
+      .col-md-4.col-xs-4.profile-well
+        %i.fa.fa-heart-o.fa-lg
+        14
+      .col-md-4.col-xs-4.profile-well
+        %i.fa.fa-thumbs-o-up.fa-lg
+        26
