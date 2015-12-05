@@ -181,7 +181,10 @@ textarea:focus{
     100% { top: 3em; opacity: 1; }
 }
 
-
+#heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
 
 
 @import 'home.css.scss';

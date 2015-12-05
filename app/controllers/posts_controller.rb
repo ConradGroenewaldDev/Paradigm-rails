@@ -16,6 +16,7 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def create
+    ProfanityChecker.swapProfanity(post_params[:description])
     @post = current_user.posts.build(post_params)
 
     if @post.save

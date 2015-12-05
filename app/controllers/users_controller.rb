@@ -2,6 +2,10 @@ class UsersController < ApplicationController
 before_action :set_user, only:[:show, :index]
 
   def show
+  	@posts = Post.where(user_id: current_user.id)
+  	@most_recent = Post.where(user_id: current_user.id).last
+  	@profile_comment_count = Post.comments.find(:all, :conditions => ["user_id = ?", current_user.id]).size
+
   end
 
   def index
@@ -15,7 +19,7 @@ def set_user
 end
 
 def user_params
-  params.require(:user).permit(:avatar, :name)
+  params.require(:user).permit(:avatar, :name, :title, :link, :description, :image)
 end
 
   def only_current_user
