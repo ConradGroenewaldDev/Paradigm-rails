@@ -17,6 +17,14 @@
 //= require_tree .
 
 //forms
+
+$("#comment-click").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#scroll-comment").offset().top
+    }, 2000);
+});
+
+//forms
 (function ($) {
     $.fn.floatLabels = function (options) {
 
@@ -125,4 +133,19 @@ $(document).ready(function () {
         return false;
     });
 
+});
+
+$(document).ready(function(){
+    $('#click').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
 });

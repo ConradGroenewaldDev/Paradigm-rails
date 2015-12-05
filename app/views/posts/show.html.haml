@@ -20,9 +20,9 @@
           = link_to dislike_post_path(@post), method: :get, class: "data" do
             %i.fa.fa-thumbs-o-down
             = pluralize(@post.get_downvotes.size, "Dislike")
-          %p.data.edit
+          %a#click.data{:href => "#comments" }
             %i.fa.fa-comments-o
-            = pluralize(@post.comments.count, "Comment")
+              = pluralize(@post.comments.count, "Comment")
           - if @post.user == current_user
             .edit
               = render 'edit_modal'

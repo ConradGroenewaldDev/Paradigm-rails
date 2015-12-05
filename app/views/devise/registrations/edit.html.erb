@@ -26,7 +26,8 @@
                             <%= f.input :email, required: true, class: "form-control"%>
                         </div>
                         <br />
-                        <div class="form-group float-label-control">
+                        <div class="form-group avatar">
+                          <%= image_tag @user.avatar.url(:thumb) %>
                             <%= f.input :avatar, class: "form-control button" %>
                         </div><br />
                     </div>

@@ -29,6 +29,7 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def update
+    ProfanityChecker.swapProfanity(post_params[:description])
     if @post.update(post_params)
       redirect_to @post
     else

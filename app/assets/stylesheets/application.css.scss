@@ -9,16 +9,16 @@
  */
 
 body {
-	font-family: 'Oswald', sans-serif;
-	font-weight: 100;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 100;
+    font-weight: 100;
 }
 
 .alert {
-	background: #fefefe;
+    background: #fefefe;
     color: #666666;
     font-weight: bold;
     font-size: small;
@@ -35,69 +35,69 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .button {
-	border: 1px solid #9B9B9B;
-	padding: .7rem 1.25rem;
-	border-radius: .3rem;
-	outline: none;
-	background: white;
-	color: #9B9B9B;
-		&:hover{
-			border: 1px solid #333233 !important;
-			background: #fff !important;
-		}
+    border: 1px solid #9B9B9B;
+    padding: .7rem 1.25rem;
+    border-radius: .3rem;
+    outline: none;
+    background: white;
+    color: #9B9B9B;
+        &:hover{
+            border: 1px solid #333233 !important;
+            background: #fff !important;
+        }
 }
 
 .navbar-default{
-	background: #fff !important;
-	border: none !important;
+    background: #fff !important;
+    border: none !important;
 }
 
 /*.navbar-default .navbar-nav > li > a{
-	color: #9B9B9B !important;
+    color: #9B9B9B !important;
 }*/
 .post-form{
-	textarea{
-		width: 100%;
-		min-height: 150px;
-	}
-	#post_title{
-		width:90%;
-	}
-	#post_link{
-		width: 90%;
-	}
-	/*#post_description{
-		width: 100%;
-	}*/
-	.input.string.optional.post_title{
-		margin-bottom: 20px;
-	}
-	.input.text.optional.post_description{
-		margin-top: 20px;
-	}
-	.input.file.optional.post_image{
-		margin: 20px 0 20px;
-	}
-	.input.file.optional.post_image label{
-		display: none;
-	}
+    textarea{
+        width: 100%;
+        min-height: 150px;
+    }
+    #post_title{
+        width:90%;
+    }
+    #post_link{
+        width: 90%;
+    }
+    /*#post_description{
+        width: 100%;
+    }*/
+    .input.string.optional.post_title{
+        margin-bottom: 20px;
+    }
+    .input.text.optional.post_description{
+        margin-top: 20px;
+    }
+    .input.file.optional.post_image{
+        margin: 20px 0 20px;
+    }
+    .input.file.optional.post_image label{
+        display: none;
+    }
 }
 
 .edit{
-	cursor: pointer;
+    cursor: pointer;
 }
 
 .scrollup {
-		background-image: url("/assets/arrow.png");
-		background-size: cover;
+    background-image: url("/assets/arrow.png");
+    background-size: cover;
     width: 40px;
     height: 40px;
     position: fixed;
     bottom: 5%;
     right: 5%;
     display: none;
-		opacity: .7;
-		z-index: 9999;
+    opacity: .7;
+    z-index: 9999;
 }
 
 /*forms css*/
@@ -114,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
         .float-label-control textarea:focus { padding-bottom: 4px; }
     .float-label-control input, .float-label-control textarea { display: block; width: 100%; padding: 0.1em 0em 1px 0em; border: none; border-radius: 0px; border-bottom: 1px solid #aaa; outline: none; margin: 0px; background: none; }
     .float-label-control textarea { padding: 0.1em 0em 5px 0em; }
-    .float-label-control label { position: absolute; font-weight: normal; top: -1.0em; left: 0.08em; color: #aaaaaa; z-index: -1; font-size: 0.85em; -moz-animation: float-labels 300ms none ease-out; -webkit-animation: float-labels 300ms none ease-out; -o-animation: float-labels 300ms none ease-out; -ms-animation: float-labels 300ms none ease-out; -khtml-animation: float-labels 300ms none ease-out; animation: float-labels 300ms none ease-out; /* There is a bug sometimes pausing the animation. This avoids that.*/ animation-play-state: running !important; -webkit-animation-play-state: running !important; }
+    .float-label-control label {font-weight: normal; top: -1.0em; left: 0.08em; color: #aaaaaa; z-index: -1; font-size: 0.85em; -moz-animation: float-labels 300ms none ease-out; -webkit-animation: float-labels 300ms none ease-out; -o-animation: float-labels 300ms none ease-out; -ms-animation: float-labels 300ms none ease-out; -khtml-animation: float-labels 300ms none ease-out; animation: float-labels 300ms none ease-out; /* There is a bug sometimes pausing the animation. This avoids that.*/ animation-play-state: running !important; -webkit-animation-play-state: running !important; }
     .float-label-control input.empty + label,
     .float-label-control textarea.empty + label { top: 0.1em; font-size: 1.5em; animation: none; -webkit-animation: none; }
     .float-label-control input:not(.empty) + label,
@@ -135,97 +135,14 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
-.btn-hot {
-color: #fff;
-background-color: #db5566;
-border-bottom:2px solid #af4451;
+input:focus{
+    border-bottom: 2px solid #007fbd;
 }
 
-.btn-hot:hover, .btn-sky.active:focus, .btn-hot:focus, .open>.dropdown-toggle.btn-hot {
-color: #fff;
-background-color: #df6a78;
-border-bottom:2px solid #b25560;
-outline: none;}
-
-
-.btn-hot:active, .btn-hot.active {
-color: #fff;
-background-color: #c04b59;
-border-top:2px solid #9a3c47;
-margin-top: 2px;
+textarea:focus{
+    border-bottom: 2px solid #007fbd;
 }
 
-.btn-sunny {
-color: #fff;
-background-color: #f4ad49;
-border-bottom:2px solid #c38a3a;
-}
-
-.btn-sunny:hover, .btn-sky.active:focus, .btn-sunny:focus, .open>.dropdown-toggle.btn-sunny {
-color: #fff;
-background-color: #f5b75f;
-border-bottom:2px solid #c4924c;
-outline: none;
-}
-
-
-.btn-sunny:active, .btn-sunny.active {
-color: #fff;
-background-color: #d69840;
-border-top:2px solid #ab7a33;
-margin-top: 2px;
-}
-
-.btn-fresh {
-color: #fff;
-background-color: #51bf87;
-border-bottom:2px solid #41996c;
-}
-
-.btn-fresh:hover, .btn-sky.active:focus, .btn-fresh:focus, .open>.dropdown-toggle.btn-fresh {
-color: #fff;
-background-color: #66c796;
-border-bottom:2px solid #529f78;
-outline: none;
-}
-
-
-.btn-fresh:active, .btn-fresh.active {
-color: #fff;
-background-color: #47a877;
-border-top:2px solid #39865f;
-outline: none;
-outline-offset: none;
-margin-top: 2px;
-}
-
-.btn-sky {
-color: #fff;
-background-color: #0bacd3;
-border-bottom:2px solid #098aa9;
-}
-
-.btn-sky:hover,.btn-sky.active:focus, .btn-sky:focus, .open>.dropdown-toggle.btn-sky {
-color: #fff;
-background-color: #29b6d8;
-border-bottom:2px solid #2192ad;
-outline: none;
-}
-
-.btn-sky:active, .btn-sky.active {
-color: #fff;
-background-color: #0a97b9;
-border-top:2px solid #087994;
-outline-offset: none;
-margin-top: 2px;
-}
-
-.btn:focus,
-.btn:active:focus,
-.btn.active:focus {
-    outline: none;
-    outline-offset: 0px;
-}
 
 
 
@@ -263,6 +180,7 @@ margin-top: 2px;
     50% { opacity: 0; font-size: 0.85em; }
     100% { top: 3em; opacity: 1; }
 }
+
 
 
 

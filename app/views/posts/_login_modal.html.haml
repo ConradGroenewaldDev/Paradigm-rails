@@ -6,15 +6,15 @@
       .modal-header
         %button.close{"data-dismiss" => "modal", :type => "button"} &times;
         %h2.modal-title Sign In
-      .modal-body.form-group
+      .modal-body
         %p Please enter your username and password
         = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-          .field
+          .form-group.float-label-control
             = f.input :email, required: true, autofocus: true, input_html: { class: "form-control" }
-          .field
+          .form-group.float-label-control
             = f.input :password, required: true, autocomplete: "off", input_html: { class: "form-control" }
           - if devise_mapping.rememberable?
-            .field
+            .form-group.float-label-control
               = f.check_box :remember_me
               = f.label :remember_me
           .actions

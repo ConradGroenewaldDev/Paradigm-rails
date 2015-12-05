@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    ProfanityChecker (0.0.0)
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
       actionview (= 4.2.4)
@@ -177,6 +178,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ProfanityChecker
   acts_as_votable (~> 0.10.0)
   bootstrap-sass (~> 3.3, >= 3.3.5.1)
   byebug
