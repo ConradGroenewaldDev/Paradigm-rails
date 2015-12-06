@@ -4,11 +4,17 @@ before_action :set_user, only:[:show, :index]
   def show
   	@posts = Post.where(user_id: current_user.id)
   	@most_recent = Post.where(user_id: current_user.id).last
-  	@profile_comment_count = Post.comments.find(:all, :conditions => ["user_id = ?", current_user.id]).size
-
+    @counter = 0
+    @like_size = 0
+    @posts.each do |post|
+     @counter += post.comments.size 
+     @like_size += post.get_likes.size
+    
+  	end
   end
 
   def index
+  @users = User.search(params[:search])
  redirect_to post_path(@post)
 end
 

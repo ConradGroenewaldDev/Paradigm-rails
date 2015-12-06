@@ -2,7 +2,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
-@import url(http://fonts.googleapis.com/css?family=Oswald);
+
 /*
 *= require_self
 *= require font-awesome
@@ -15,6 +15,10 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 100;
+}
+
+.search{
+    margin-top: 10px;
 }
 
 .alert {

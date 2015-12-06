@@ -25,7 +25,7 @@
               = pluralize(@post.comments.count, "Comment")
           - if @post.user == current_user
             .edit
-              = render 'edit_modal'
+            = render 'edit_modal'
             = link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" }, class: "data"
         .col-md-3#random_post
           %h3 Other Inspiration

@@ -4,6 +4,7 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @posts = Post.all.order("created_at DESC")
+    @posts = Post.search(params[:search])
   end
 
   def show
@@ -40,7 +41,7 @@ before_action :authenticate_user!, except: [:index, :show]
 
   def destroy
     @post.destroy
-    redirect_to root_path
+    redirect_to root_path, :notice => "Your post has been deleted"
   end
 
   def upvote
@@ -59,6 +60,6 @@ before_action :authenticate_user!, except: [:index, :show]
   end
 
   def post_params
-    params.require(:post).permit(:title, :link, :description, :image)
+    params.require(:post).permit(:title, :link, :description, :image, :id)
   end
 end

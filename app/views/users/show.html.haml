@@ -2,7 +2,7 @@
 .container{:style => "margin-top: 20px; margin-bottom: 20px;"}
   .row.panel
     .col-md-4.bg_blur
-      =image_tag @most_recent.image.url
+      = image_tag @most_recent.image.url
       %a.follow_btn.hidden-xs{:href => "#"} Follow
     .col-md-8.col-xs-12
       .img-thumbnail.picture.hidden-xs
@@ -21,17 +21,18 @@
     .col-md-8.col-xs-12{:style => "margin: 0px;padding: 0px;"}
       .col-md-4.col-xs-4.profile-well
         %i.fa.fa-weixin.fa-lg
-          = @profile_comment_count
+        = @counter
       .col-md-4.col-xs-4.profile-well
         %i.fa.fa-heart-o.fa-lg
         14
       .col-md-4.col-xs-4.profile-well
         %i.fa.fa-thumbs-o-up.fa-lg
-        26
+        = @like_size
+        
 
 .row#posts
   %h2#heading
-    My Added Inspirations
+    Added Inspirations
   - @posts.each do |post|
     .col-md-4.post
       .post_image

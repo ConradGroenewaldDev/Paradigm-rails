@@ -40,11 +40,15 @@ $color_royal_blue_approx: #3d5de0;
 	}
 }
 
+.panel img{
+		width: 100%;
+		height: 100%;
+	}
 
 .bg_blur {
 	height: 300px;
-	background-size: cover;
 }
+
 .follow_btn {
 	text-decoration: none;
 	position: absolute;
@@ -84,14 +88,22 @@ $color_royal_blue_approx: #3d5de0;
 	height: 150px;
 	width: 150px;
 	position: absolute;
+	background-color: transparent;
 	top: 75px;
 	left: -75px;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 .picture_mob {
+	height: 150px;
+	width: 150px;
 	position: absolute;
+	background-color: transparent;
 	width: 35%;
 	left: 35%;
 	bottom: 70%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
 }
 
 .img-thumbnail{
@@ -103,16 +115,13 @@ $color_royal_blue_approx: #3d5de0;
 	display: none;
 }
 
-.avatar img{
-	margin-bottom: 20px;
-}
-
 .img-thumbnail img{
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
 	border: 5px solid #ccc;
 }
+
 .btn-style {
 	color: $white;
 	background-color: $color_lochmara_approx;

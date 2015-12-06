@@ -15,4 +15,12 @@ class User < ActiveRecord::Base
 
   belongs_to :users
 
+def self.search(search)
+  if search
+    where(['user_id: LIKE ?', "%#{search}%"])
+  else
+    all
+  end
+end
+
 end

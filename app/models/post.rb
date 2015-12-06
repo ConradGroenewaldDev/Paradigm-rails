@@ -5,4 +5,12 @@ class Post < ActiveRecord::Base
   has_attached_file :image, styles: { medium: "700x500#", small: "350x250>" },
   :default_url => 'Images-icon.png'
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+
+ def self.search(search)
+  if search
+    where(['title LIKE ?', "%#{search}%"])
+  else
+    all
+  end
+end
 end
