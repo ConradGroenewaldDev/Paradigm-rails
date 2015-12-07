@@ -52,9 +52,9 @@ $color_royal_blue_approx: #3d5de0;
 .follow_btn {
 	text-decoration: none;
 	position: absolute;
-	left: 35%;
+	left: 25%;
 	top: 42.5%;
-	width: 35%;
+	width: 50%;
 	height: 15%;
 	background-color: $color_lochmara_approx;
 	padding: 10px;
@@ -66,9 +66,9 @@ $color_royal_blue_approx: #3d5de0;
 	&:hover {
 		text-decoration: none;
 		position: absolute;
-		left: 35%;
+		left: 25%;
 		top: 42.5%;
-		width: 35%;
+		width: 50%;
 		height: 15%;
 		background-color: $color_lochmara_approx;
 		padding: 10px;
@@ -134,6 +134,40 @@ $color_royal_blue_approx: #3d5de0;
 		width: 33.3%;
 	}
 }
+
+.well{
+    background-color: transparent;
+    border: none;
+    :hover{
+    	text-decoration: none;
+    }
+
+    .social{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+    }
+
+    .pin {
+        background-image: url("/assets/pin.svg");
+        display: inline-block;
+
+    }
+    .twitter{
+        background-image: url("/assets/twitter.svg");
+        display: inline-block;
+    }
+    .insta{
+        background-image: url("/assets/insta.svg");
+        display: inline-block;
+    }
+    .face{
+        background-image: url("/assets/face.svg");
+        display: inline-block;
+    }
+}
+
 @media(max-width: 767px) {
 	.profile-profile-header {
 		text-align: center;

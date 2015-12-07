@@ -3,7 +3,15 @@
   .row.panel
     .col-md-4.bg_blur
       = image_tag @most_recent.image.url
-      %a.follow_btn.hidden-xs{:href => "#"} Follow
+      %a.follow_btn.hidden-xs{"aria-controls" => "collapseExample", "aria-expanded" => "false", "data-toggle" => "collapse", :href => "#collapseExample", :role => "button"}
+        Share
+        #collapseExample.collapse
+          .well
+            .pin.social
+            .twitter.social
+            .insta.social
+            .face.social
+
     .col-md-8.col-xs-12
       .img-thumbnail.picture.hidden-xs
         = image_tag @user.avatar.url(:thumb)

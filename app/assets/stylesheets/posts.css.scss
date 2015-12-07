@@ -123,6 +123,14 @@
 			margin: 0;
 			color: #969696;
 		}
+		img {
+				width: 50px;
+				height: 50px;
+				border-radius: 50% !important;
+				-webkit-border-radius: 50%;
+				float: left;
+				margin-right: 20px
+			}
 	}
 	.comment_content {
 		margin-top: 2.5rem;

@@ -16,11 +16,9 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function(){
-    $(window).scroll(function(){
-        ($(window).scrollTop() == $(document).height() - $(window).height())
-    });
-});
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 //forms
 

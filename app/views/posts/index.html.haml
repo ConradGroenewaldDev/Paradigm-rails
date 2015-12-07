@@ -13,14 +13,13 @@
           What Inspires you?
           %br/
           %small.text-center
-            Share your inspiration and see what's inspriring others
+            Share your inspiration and see what's inspiring others
 
       .row#posts
         - @posts.each do |post|
           .col-md-4.post
             .post_image
               = link_to (image_tag post.image.url(:small)), post
-            .post_content
               .title
                 %h2= link_to post.title, post
               .data.clearfix
